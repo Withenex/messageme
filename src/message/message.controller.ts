@@ -13,7 +13,8 @@ export class MessageController {
     }
 
     @Get()
-    getMessage(){
+    getMessage(@Req() request:any){
+        console.log(request);
         return this.messages.getLatestMessage();
     }
 }
