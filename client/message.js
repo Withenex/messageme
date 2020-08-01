@@ -4,7 +4,9 @@ const button = document.getElementById('button');
 
 function sendMessage()
 {
-    var body = `{"content":"${message.value}","sender":"${name.value}"}`
+    request.setRequestHeader("Content-Type","application/json")
+    var body = JSON.stringify({content: message.value,sender: name.value})
+    console.log(Object.keys(JSON.parse(body)));
     console.log(body);
     request.send(body);
 
