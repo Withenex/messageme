@@ -4,7 +4,7 @@ const button = document.getElementById('button');
 
 function sendMessage()
 {
-    var body = `{content:${message.value},sender:${name.value}}`
+    var body = `{"content":${message.value},"sender":${name.value}}`
     request.send(body);
 
 }
