@@ -18,7 +18,14 @@ export class MessageService {
 
     getLatestMessage()
     {
+        if(this.latestMessage)
+        {
         let parsedMessage = `${this.latestMessage.sender} Says: ${this.latestMessage.content}`;
         return parsedMessage;
+        }
+        else
+        {
+            return "There is currently no message to read"
+        }
     }
 }
