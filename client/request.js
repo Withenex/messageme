@@ -1,6 +1,6 @@
 const request = new XMLHttpRequest();
 
-url = 'http://localhost:3000/api/message';
+url = 'https://mighty-coast-41688.herokuapp.com/api/message';
 
 request.open('post',url,true);
 
