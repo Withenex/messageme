@@ -1,0 +1,23 @@
+import { Injectable } from '@nestjs/common';
+import {MessageDTO} from './message.dto';
+import {ButtonService} from '../button/button.service';
+@Injectable()
+export class MessageService {
+
+    constructor(private button:ButtonService)
+    {}
+
+    latestMessage:MessageDTO;
+
+    newMessage(message:MessageDTO)
+    {
+        this.latestMessage = message;
+        this.button.push();
+        return "Message Updated"
+    }
+
+    getLatestMessage()
+    {
+        return this.latestMessage;
+    }
+}
