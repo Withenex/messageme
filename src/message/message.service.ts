@@ -13,6 +13,7 @@ export class MessageService {
     {
         this.latestMessage = message;
         this.button.push();
+        console.log(this.latestMessage);
         return "Message Updated"
     }
 
