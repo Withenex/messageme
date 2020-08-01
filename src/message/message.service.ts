@@ -18,6 +18,7 @@ export class MessageService {
 
     getLatestMessage()
     {
-        return this.latestMessage;
+        let parsedMessage = `${this.latestMessage.sender} Says: ${this.latestMessage.content}`;
+        return parsedMessage;
     }
 }
