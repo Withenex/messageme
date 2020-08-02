@@ -2,7 +2,7 @@ const request = new XMLHttpRequest();
 
 url = 'https://mighty-coast-41688.herokuapp.com/api/message';
 
-request.open('post',url,true);
+resetRequest();
 
 request.onload = function (response)
 {
@@ -16,4 +16,11 @@ request.onload = function (response)
         button.setAttribute('class',"btn btn-outline-danger");
     button.textContent = "Couldn't send message";
     }
+}
+
+function resetRequest()
+{
+    request.open('post',url,true);
+    button.setAttribute('class','btn btn-outline-primary');
+    button.textContent = "Send Message"
 }

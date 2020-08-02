@@ -21,13 +21,16 @@
   <body class="bg-light">
     <div class="container p-5">
       <div class="card shadow-lg">
-        <div class="card-header bg-primary text-light">Send Brandon a Message</div>
+        <div class="card-header bg-primary text-light">
+          <h2>Send Brandon a Message</h2>
+        </div>
         <div class="card-content p-5">
           <form>
             <label class="w-100"
               >Your Name:
 
               <input
+                oninput="resetRequest();"
                 type="text"
                 class="form-control"
                 id="name"
@@ -39,13 +42,22 @@
               >Your Message:
 
               <textarea
+                oninput="resetRequest();"
                 type="textarea"
                 class="form-control"
+                style="height:20vh;"
                 id="message"
                 placeholder="Enter message"
               ></textarea>
             </label>
-            <div id="button" class="btn btn-outline-primary" onclick="sendMessage();">Send Message</button>
+            <div
+              id="button"
+              class="btn btn-outline-primary"
+              onclick="sendMessage();"
+            >
+              Send Message
+            </div>
+            <!--<div id="reset" class="btn btn-outline-primary">Reset</div>-->
           </form>
         </div>
       </div>
@@ -69,7 +81,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src='message.js'></script>
-    <script src='request.js'></script>
+    <script src="message.js"></script>
+    <script src="request.js"></script>
   </body>
 </html>
