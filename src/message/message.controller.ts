@@ -14,7 +14,7 @@ export class MessageController {
 
     @Get()
     getMessage(@Req() request:any){
-        console.log(request);
+        //console.log(request);
         return this.messages.getLatestMessage();
     }
 }
