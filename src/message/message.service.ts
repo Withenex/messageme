@@ -8,9 +8,8 @@ export class MessageService {
   latestMessage: MessageDTO;
 
   async newMessage(message: MessageDTO) {
+    this.latestMessage = message;
     if(await this.button.push()){
-      this.latestMessage = message;
-      
       console.log(this.latestMessage);
       return 'Message Updated';
     } else {
